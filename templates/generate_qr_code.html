@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate QR Code for Digital Restaurant Menu</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+        <a href="" class="navbar-brand">Generate Your QR Code Here</a>
+    </div>
+</nav>
+
+<!-- QR Code Form -->
+<div class="container mt-5" style="width: 600px; border: 2px solid #b40606; padding: 30px; border-radius: 10px;">
+    
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary w-100">
+            Generate QR Code
+        </button>
+    </form>
+
+    {% if qr_image_url %}
+        <hr>
+        <h5 class="text-center mt-3">Generated QR Code</h5>
+        <div class="text-center">
+            <img src="{{ qr_image_url }}" alt="QR Code" class="img-fluid">
+        </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
