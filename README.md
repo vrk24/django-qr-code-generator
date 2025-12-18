@@ -17,6 +17,23 @@ Users can generate QR codes and download them in **PNG** or **PDF** format.
 - ReportLab
 - Bootstrap 5
 
+QR-CODE-DJANGO/
+│
+├── django_qr/
+│   ├── static/
+│   │   └── qr_result.css
+│   ├── templates/
+│   │   ├── generate_qr_code.html
+│   │   └── qr_result.html
+│   ├── views.py
+│   ├── forms.py
+│   ├── urls.py
+│   ├── settings.py
+│
+├── manage.py
+├── README.md
+├── .gitignore
+
 ## ▶️ How to Run Locally
 
 ```bash
@@ -34,19 +51,3 @@ IDEAL FINAL STRUCTURE (WHAT IT SHOULD LOOK LIKE)
 
 python manage.py runserver
 
-QR-CODE-DJANGO/
-│
-├── django_qr/
-│   ├── static/
-│   │   └── qr_result.css
-│   ├── templates/
-│   │   ├── generate_qr_code.html
-│   │   └── qr_result.html
-│   ├── views.py
-│   ├── forms.py
-│   ├── urls.py
-│   ├── settings.py
-│
-├── manage.py
-├── README.md
-├── .gitignore
