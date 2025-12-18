@@ -30,4 +30,23 @@ env\Scripts\activate
 
 pip install -r requirements.txt
 
+IDEAL FINAL STRUCTURE (WHAT IT SHOULD LOOK LIKE)
+
 python manage.py runserver
+
+QR-CODE-DJANGO/
+│
+├── django_qr/
+│   ├── static/
+│   │   └── qr_result.css
+│   ├── templates/
+│   │   ├── generate_qr_code.html
+│   │   └── qr_result.html
+│   ├── views.py
+│   ├── forms.py
+│   ├── urls.py
+│   ├── settings.py
+│
+├── manage.py
+├── README.md
+├── .gitignore
